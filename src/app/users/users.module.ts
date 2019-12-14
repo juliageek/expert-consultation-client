@@ -16,6 +16,8 @@ import { UsersViewComponent } from './components/users-view/users-view.component
     ...fromComponents.components,
     UsersViewComponent
   ],
-  providers: [...fromGuards.guards]
+  providers: [
+    ...fromGuards.guards,
+  ]
 })
 export class UsersModule {}

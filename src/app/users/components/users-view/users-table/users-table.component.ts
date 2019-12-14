@@ -40,7 +40,7 @@ export class UsersTableComponent extends BaseComponent
         'email',
         'phoneNumber',
         'district',
-        'organisation'
+        'organisation',
       ]
     };
   }

@@ -56,13 +56,16 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
+        deps: [HttpClient],
       }
     }),
     environment.production ? [] : StoreDevtoolsModule.instrument()
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-  providers: [...fromGuards.guards, httpInterceptorProviders]
+  providers: [
+    ...fromGuards.guards,
+    httpInterceptorProviders,
+  ]
 })
 export class AppModule {}
