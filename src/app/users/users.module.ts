@@ -7,20 +7,15 @@ import { UsersRoutingModule } from './users-routing.module';
 import * as fromContainers from './containers';
 import * as fromComponents from './components';
 import * as fromGuards from './guards';
+import { UsersViewComponent } from './components/users-view/users-view.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    SharedModule,
-    UsersRoutingModule,
-  ],
+  imports: [CommonModule, SharedModule, UsersRoutingModule],
   declarations: [
     ...fromContainers.components,
     ...fromComponents.components,
+    UsersViewComponent
   ],
-  providers: [
-    ...fromGuards.guards,
-  ]
+  providers: [...fromGuards.guards]
 })
-export class UsersModule {
-}
+export class UsersModule {}
