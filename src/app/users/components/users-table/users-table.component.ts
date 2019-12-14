@@ -11,8 +11,8 @@ import { BaseComponent } from '@app/shared/components/base-component';
   styleUrls: ['./users-table.component.scss']
 })
 export class UsersTableComponent extends BaseComponent implements OnInit, AfterViewInit {
-  @ViewChild(MatSort, {static: false}) sort: MatSort;
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
 
   @Input() users: User[];
   @Input() pageData: PageData;
@@ -25,14 +25,7 @@ export class UsersTableComponent extends BaseComponent implements OnInit, AfterV
 
   ngOnInit(): void {
     this.tableConfig = {
-      displayedColumns: [
-        'lastName',
-        'firstName',
-        'email',
-        'phoneNumber',
-        'district',
-        'organisation',
-      ],
+      displayedColumns: ['lastName', 'firstName', 'email', 'phoneNumber', 'district', 'organisation']
     };
   }
 
@@ -49,7 +42,8 @@ export class UsersTableComponent extends BaseComponent implements OnInit, AfterV
             return of([]);
           }),
           takeUntil(this.destroyed$)
-        ).subscribe();
+        )
+        .subscribe();
     }
   }
 
@@ -61,5 +55,4 @@ export class UsersTableComponent extends BaseComponent implements OnInit, AfterV
 
     return filter;
   }
-
 }
