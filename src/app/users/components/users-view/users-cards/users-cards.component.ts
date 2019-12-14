@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Filter, PageData, User } from '@app/core';
 
 @Component({
@@ -6,9 +6,13 @@ import { Filter, PageData, User } from '@app/core';
   templateUrl: './users-cards.component.html',
   styleUrls: ['./users-cards.component.scss']
 })
-export class UsersCardsComponent {
+export class UsersCardsComponent implements OnInit {
   @Input() users: User[];
   @Input() pageData: PageData;
   @Input() filter: Filter;
   @Input() loading: boolean;
+
+  constructor() {}
+
+  ngOnInit() {}
 }
