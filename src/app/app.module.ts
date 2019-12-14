@@ -29,13 +29,13 @@ export const httpInterceptorProviders = [
   {
     provide: HTTP_INTERCEPTORS,
     useClass: HeaderInterceptor,
-    multi: true
+    multi: true,
   },
   {
     provide: HTTP_INTERCEPTORS,
     useClass: JwtInterceptor,
-    multi: true
-  }
+    multi: true,
+  },
 ];
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -56,13 +56,13 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
+        deps: [HttpClient],
+      },
     }),
-    environment.production ? [] : StoreDevtoolsModule.instrument()
+    environment.production ? [] : StoreDevtoolsModule.instrument(),
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-  providers: [...fromGuards.guards, httpInterceptorProviders]
+  providers: [...fromGuards.guards, httpInterceptorProviders],
 })
 export class AppModule {}

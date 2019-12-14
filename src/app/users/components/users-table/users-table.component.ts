@@ -8,7 +8,7 @@ import { BaseComponent } from '@app/shared/components/base-component';
 @Component({
   selector: 'app-users-table',
   templateUrl: './users-table.component.html',
-  styleUrls: ['./users-table.component.scss']
+  styleUrls: ['./users-table.component.scss'],
 })
 export class UsersTableComponent extends BaseComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort, { static: false }) sort: MatSort;
@@ -25,7 +25,7 @@ export class UsersTableComponent extends BaseComponent implements OnInit, AfterV
 
   ngOnInit(): void {
     this.tableConfig = {
-      displayedColumns: ['lastName', 'firstName', 'email', 'phoneNumber', 'district', 'organisation']
+      displayedColumns: ['lastName', 'firstName', 'email', 'phoneNumber', 'district', 'organisation'],
     };
   }
 
