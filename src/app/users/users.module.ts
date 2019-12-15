@@ -11,7 +11,13 @@ import { UsersViewComponent } from './components/users-view/users-view.component
 
 @NgModule({
   imports: [CommonModule, SharedModule, UsersRoutingModule],
-  declarations: [...fromContainers.components, ...fromComponents.components, UsersViewComponent],
-  providers: [...fromGuards.guards],
+  declarations: [
+    ...fromContainers.components,
+    ...fromComponents.components,
+    UsersViewComponent,
+  ],
+  providers: [
+    ...fromGuards.guards,
+  ],
 })
 export class UsersModule {}

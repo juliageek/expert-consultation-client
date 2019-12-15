@@ -4,4 +4,10 @@ import { UserFormComponent } from '@app/users/components/user-form/user-form.com
 import { UsersCardsComponent } from '@app/users/components/users-view/users-cards/users-cards.component';
 import { UserCardComponent } from '@app/users/components/users-view/users-cards/user-card/user-card.component';
 
-export const components: any[] = [UsersTableComponent, UsersHeaderComponent, UserFormComponent, UsersCardsComponent, UserCardComponent];
+export const components: any[] = [
+  UsersTableComponent,
+  UsersHeaderComponent,
+  UserFormComponent,
+  UsersCardsComponent,
+  UserCardComponent,
+];

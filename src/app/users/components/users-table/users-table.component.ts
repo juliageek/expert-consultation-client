@@ -25,7 +25,14 @@ export class UsersTableComponent extends BaseComponent implements OnInit, AfterV
 
   ngOnInit(): void {
     this.tableConfig = {
-      displayedColumns: ['lastName', 'firstName', 'email', 'phoneNumber', 'district', 'organisation'],
+      displayedColumns: [
+        'lastName',
+        'firstName',
+        'email',
+        'phoneNumber',
+        'district',
+        'organisation',
+      ],
     };
   }
 
