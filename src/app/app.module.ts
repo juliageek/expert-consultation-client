@@ -61,7 +61,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     }),
     environment.production ? [] : StoreDevtoolsModule.instrument(),
   ],
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+  ],
   bootstrap: [AppComponent],
   providers: [
     ...fromGuards.guards,
