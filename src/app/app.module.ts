@@ -63,6 +63,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-  providers: [...fromGuards.guards, httpInterceptorProviders],
+  providers: [
+    ...fromGuards.guards,
+    httpInterceptorProviders,
+  ],
 })
 export class AppModule {}
