@@ -10,7 +10,11 @@ import * as fromGuards from './guards';
 import { UsersViewComponent } from './components/users-view/users-view.component';
 
 @NgModule({
-  imports: [CommonModule, SharedModule, UsersRoutingModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    UsersRoutingModule,
+  ],
   declarations: [
     ...fromContainers.components,
     ...fromComponents.components,

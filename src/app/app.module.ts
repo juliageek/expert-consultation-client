@@ -61,8 +61,15 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     }),
     environment.production ? [] : StoreDevtoolsModule.instrument(),
   ],
-  declarations: [AppComponent],
-  bootstrap: [AppComponent],
-  providers: [...fromGuards.guards, httpInterceptorProviders],
+  declarations: [
+    AppComponent,
+  ],
+  bootstrap: [
+    AppComponent,
+  ],
+  providers: [
+    ...fromGuards.guards,
+    httpInterceptorProviders,
+  ],
 })
 export class AppModule {}
