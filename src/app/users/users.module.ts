@@ -7,7 +7,6 @@ import { UsersRoutingModule } from './users-routing.module';
 import * as fromContainers from './containers';
 import * as fromComponents from './components';
 import * as fromGuards from './guards';
-import { UsersViewComponent } from './components/users-view/users-view.component';
 
 @NgModule({
   imports: [
@@ -18,7 +17,6 @@ import { UsersViewComponent } from './components/users-view/users-view.component
   declarations: [
     ...fromContainers.components,
     ...fromComponents.components,
-    UsersViewComponent,
   ],
   providers: [
     ...fromGuards.guards,
